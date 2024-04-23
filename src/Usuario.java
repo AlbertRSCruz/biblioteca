@@ -1,6 +1,17 @@
 public class Usuario {
+
     private String nome;
-    private int idade;
+    private int codigo;
+    private long cpf;
+    private Endereco endereco;
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
 
     public String getNome() {
         return nome;
@@ -10,11 +21,19 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public int getIdade() {
-        return idade;
+    public long getCpf() {
+        return cpf;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setCpf(long cpf) {
+        this.cpf = cpf;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 }

@@ -1,20 +1,38 @@
 public class Livro {
-    private String nome;
-    private int idade;
+    private String titulo;
+    private String genero;
+    private String autor;
+    private boolean status;
 
-    public String getNome() {
-        return nome;
+    public String getAutor() {
+        return autor;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
-    public int getIdade() {
-        return idade;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 }
