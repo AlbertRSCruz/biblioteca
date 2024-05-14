@@ -19,40 +19,51 @@ public class Main {
                 case 1:
                     System.out.println(":::::::::::::::::::::Bem vindo ao menu funcionario:::::::::::::::::::::");
                     System.out.println("Digite seu nome:");
-                    String nome = scanner.next();
-                    System.out.println("Digite seu CPF");
-                    long cpf = scanner.nextLong();
-                    System.out.println("Digite o salario");
-                    double salario= scanner.nextDouble();
-                    Endereco endereco=scanner.next()
-                    break;
-                    //LEIA O NOME QUE O FUNCIONARIO VAI DIGITAR
-
+                    locacao.getFuncionario().setNome(scanner.next());
+                    System.out.println("Digite seu cpf:");
+                    locacao.getFuncionario().setCpf(scanner.nextLong());
+                    System.out.println("Digite seu cargo");
+                    locacao.getFuncionario().setCargo(scanner.next());
+                    System.out.println("Digite seu salario");
+                    locacao.getFuncionario().setSalario(scanner.nextDouble());
+                    System.out.println("Digite seu endereço, sua rua:");
+                    locacao.getFuncionario().getEndereco().setRua(scanner.next());
+                    System.out.println("Digite seu bairro");
+                    locacao.getFuncionario().getEndereco().setBairro(scanner.next());
+                    System.out.println("Digite seu numero");
+                    locacao.getFuncionario().getEndereco().setNumero(scanner.nextInt());
                 case 2:
-                    System.out.println(":::::::::::::::::::::Bem vindo ao menu usuário:::::::::::::::::::::");
+                    System.out.println(":::::::::::::::::::::Bem vindo ao menu funcionario:::::::::::::::::::::");
                     System.out.println("Cadastrar usuário:");
-                    String usuario = scanner.next();
-
-                    //LEIA O NOME QUE O USUARIO VAI DIGITAR
-                    //E ASSIM CRIE OS OUTROS CASES
+                    //nome codigo cpf endereco
+                    System.out.println("Digite seu nome");
+                    locacao.getUsuario().setNome(scanner.next());
+                    System.out.println("Digite seu codigo");
+                    locacao.getUsuario().setCodigo(scanner.nextInt());
+                    System.out.println("Digite seu CPF");
+                    locacao.getUsuario().setCpf(scanner.nextLong());
+                    System.out.println("Digite seu endereço,seu bairro");
+                    locacao.getUsuario().getEndereco().setBairro(scanner.next());
+                    System.out.println("Digite seu numero");
+                    locacao.getUsuario().getEndereco().setNumero(scanner.nextInt());
+                    System.out.println("Digite sua rua");
+                    locacao.getUsuario().getEndereco().setRua(scanner.next());
 
                 case 3:
-                    System.out.println(":::::::::::::::::::::Bem vindo ao menu usuário:::::::::::::::::::::");
-                    System.out.println("Cadastrar livro:");
-                    String livro = scanner.next();
-
+                    System.out.println(":::::::::::::::::::::Bem vindo ao menu cadastro livro:::::::::::::::::::::");
+                    System.out.println("Cadastrar Titulo:");
+                    locacao.getLivro().setTitulo(scanner.next());
+                    System.out.println("Cadastrar Autor");
+                    locacao.getLivro().setAutor(scanner.next());
+                    System.out.println("Cadastre o genero");
+                    locacao.getLivro().setGenero(scanner.next());
 
                 case 4:
                     System.out.println(":::::::::::::::::::::Bem vindo ao menu usuário:::::::::::::::::::::");
                     System.out.println("Mostrar todos os dados do cadastro");
-                    
-
-
 
                 case 5:
                     System.out.println(":::::::::::::::::::::Bem vindo ao menu usuário:::::::::::::::::::::");
-                    System.out.println("Ir para a locação");
-                    String local = scanner.next();
                     break;
 
             }
