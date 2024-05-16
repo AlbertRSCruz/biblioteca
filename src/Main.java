@@ -16,6 +16,7 @@ public class Main {
             System.out.println("Digite aqui a opção");
             opcao = scanner.nextInt();
             switch(opcao){
+
                 case 1:
                     System.out.println(":::::::::::::::::::::Bem vindo ao menu funcionario:::::::::::::::::::::");
                     System.out.println("Digite seu nome:");
@@ -32,6 +33,7 @@ public class Main {
                     locacao.getFuncionario().getEndereco().setBairro(scanner.next());
                     System.out.println("Digite seu numero");
                     locacao.getFuncionario().getEndereco().setNumero(scanner.nextInt());
+
                 case 2:
                     System.out.println(":::::::::::::::::::::Bem vindo ao menu funcionario:::::::::::::::::::::");
                     System.out.println("Cadastrar usuário:");
@@ -59,12 +61,73 @@ public class Main {
                     locacao.getLivro().setGenero(scanner.next());
 
                 case 4:
-                    System.out.println(":::::::::::::::::::::Bem vindo ao menu usuário:::::::::::::::::::::");
-                    System.out.println("Mostrar todos os dados do cadastro");
+                       do{
+                        System.out.print("Selecione o cadastro na qual o mesmo queira acessar: \n"
+                                + "1 - Cadastro do Funcionário: \n"
+                                + "2 - Cadastro do Usuário \n"
+                                + "3 - Cadastro do livro\n"
+                                + "9 - Voltar ao menu principal\n"
+                                + "Digite a opção desejada: ");
+                        opcao = scanner.nextInt();
+                        switch (opcao){
+                            case 1:
+                                System.out.println(locacao.getFuncionario().toString());
+                                break;
+                            case 2:
+                                System.out.println(locacao.getUsuario().toString());
+                                break;
+                            case 3:
+                                System.out.println(locacao.getLivro().toString());
+                                break;
+                            default:
+                                System.out.println("Opção invalida");
+                                break;
+                        }
+
+                    }while (opcao!=9);
 
                 case 5:
-                    System.out.println(":::::::::::::::::::::Bem vindo ao menu usuário:::::::::::::::::::::");
-                    break;
+                   do {
+                       System.out.print("\n::::::::::::::::: Sistema de Locação ::::::::::::::::::\n" +
+                               "  Escolha uma opção abaixo\n" +
+                               "  [1] - Locar livro\n" +
+                               "  [2] - Devolver livro\n" +
+                               "  [3] - Mostrar os dados do livro locado\n" +
+                               "  [4] - Mostra os dados do livro devolvido\n" +
+                               "  [5] - Sair da locação\n" +
+                               "  Digite aqui a opção: \n");
+                       opcao = scanner.nextInt();
+                       switch (opcao){
+                           case 1:
+                               System.out.println("Digite o titulo do livro");
+                               locacao.getLivro().setTitulo(scanner.next());
+                               System.out.println("Digite o autor do livro");
+                               locacao.getLivro().setAutor(scanner.next());
+                               System.out.println("Digite o genero do livro");
+                               locacao.getLivro().setGenero(scanner.next());
+                               break;
+
+                           case 2:
+                               System.out.println("Digite o titulo do livro");
+                               locacao.getLivro().setTitulo(scanner.next());
+                               System.out.println("Digite o autor do livro");
+                               locacao.getLivro().setAutor(scanner.next());
+                               System.out.println("Digite o genero do livro");
+                               locacao.getLivro().setGenero(scanner.next());
+                               break;
+
+                           case 3:
+                               System.out.println(locacao.getLivro().toString());
+                               break;
+                           case 4:
+                               System.out.println(locacao.getLivro().toString());
+                               break;
+
+                           default:
+                               System.out.println("opcao invalida");
+                       }
+
+                   }while (opcao!=5);
 
             }
         }while(opcao !=0);
