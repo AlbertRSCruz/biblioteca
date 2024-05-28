@@ -18,7 +18,7 @@ public class Funcionario {
         return cpf;
     }
 
-    public void setCpf(long cpf) {
+    public void setcpf(long cpf) {
         this.cpf = cpf;
     }
 

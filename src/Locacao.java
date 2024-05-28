@@ -3,11 +3,11 @@ import javax.xml.crypto.Data;
 public class Locacao {
 
     private double valorLocacao;
-    private double valorMulto;
+    private double valorMulta;
     private Funcionario funcionario;
     private Usuario usuario;
-    private Livro livro;
-    private Livro liroLocado;
+    private static Livro livro;
+    private Livro livroLocado;
     private Data dataLocacao;
     private Data dataDevolucao;
 
@@ -19,12 +19,12 @@ public class Locacao {
         this.valorLocacao = valorLocacao;
     }
 
-    public double getValorMulto() {
-        return valorMulto;
+    public double getValorMulta() {
+        return valorMulta;
     }
 
-    public void setValorMulto(double valorMulto) {
-        this.valorMulto = valorMulto;
+    public void setValorMulta(double valorMulta) {
+        this.valorMulta = valorMulta;
     }
 
     public Funcionario getFuncionario() {
@@ -43,7 +43,7 @@ public class Locacao {
         this.usuario = usuario;
     }
 
-    public Livro getLivro() {
+    public static Livro getlivro() {
         return livro;
     }
 
@@ -52,11 +52,11 @@ public class Locacao {
     }
 
     public Livro getLiroLocado() {
-        return liroLocado;
+        return livroLocado;
     }
 
-    public void setLiroLocado(Livro liroLocado) {
-        this.liroLocado = liroLocado;
+    public void setLiroLocado(Livro livroLocado) {
+        this.livroLocado = livroLocado;
     }
 
     public Data getDataLocacao() {
@@ -73,5 +73,18 @@ public class Locacao {
 
     public void setDataDevolucao(Data dataDevolucao) {
         this.dataDevolucao = dataDevolucao;
+    }
+
+    @Override
+    public String toString() {
+        return "Locacao{" +
+                "valorLocacao=" + valorLocacao +
+                ", valorMulta=" + valorMulta +
+                ", funcionario=" + funcionario +
+                ", usuario=" + usuario +
+                ", livroLocado=" + livroLocado +
+                ", dataLocacao=" + dataLocacao +
+                ", dataDevolucao=" + dataDevolucao +
+                '}';
     }
 }

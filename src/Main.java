@@ -2,6 +2,8 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
+    private static Object locacao;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Locacao locacao = new Locacao();
@@ -22,7 +24,7 @@ public class Main {
                     System.out.println("Digite seu nome:");
                     locacao.getFuncionario().setNome(scanner.next());
                     System.out.println("Digite seu cpf:");
-                    locacao.getFuncionario().setCpf(scanner.nextLong());
+                    locacao.getFuncionario().setcpf(scanner.nextLong());
                     System.out.println("Digite seu cargo");
                     locacao.getFuncionario().setCargo(scanner.next());
                     System.out.println("Digite seu salario");
@@ -33,11 +35,11 @@ public class Main {
                     locacao.getFuncionario().getEndereco().setBairro(scanner.next());
                     System.out.println("Digite seu numero");
                     locacao.getFuncionario().getEndereco().setNumero(scanner.nextInt());
+                    break;
 
                 case 2:
                     System.out.println(":::::::::::::::::::::Bem vindo ao menu funcionario:::::::::::::::::::::");
                     System.out.println("Cadastrar usuário:");
-                    //nome codigo cpf endereco
                     System.out.println("Digite seu nome");
                     locacao.getUsuario().setNome(scanner.next());
                     System.out.println("Digite seu codigo");
@@ -50,15 +52,17 @@ public class Main {
                     locacao.getUsuario().getEndereco().setNumero(scanner.nextInt());
                     System.out.println("Digite sua rua");
                     locacao.getUsuario().getEndereco().setRua(scanner.next());
+                    break;
 
                 case 3:
                     System.out.println(":::::::::::::::::::::Bem vindo ao menu cadastro livro:::::::::::::::::::::");
                     System.out.println("Cadastrar Titulo:");
-                    locacao.getLivro().setTitulo(scanner.next());
+                    locacao.getlivro().setTitulo(scanner.next());
                     System.out.println("Cadastrar Autor");
-                    locacao.getLivro().setAutor(scanner.next());
+                    locacao.getlivro().setAutor(scanner.next());
                     System.out.println("Cadastre o genero");
-                    locacao.getLivro().setGenero(scanner.next());
+                    locacao.getlivro().setGenero(scanner.next());
+                    break;
 
                 case 4:
                        do{
@@ -77,7 +81,7 @@ public class Main {
                                 System.out.println(locacao.getUsuario().toString());
                                 break;
                             case 3:
-                                System.out.println(locacao.getLivro().toString());
+                                System.out.println(locacao.getlivro().toString());
                                 break;
                             default:
                                 System.out.println("Opção invalida");
@@ -100,27 +104,27 @@ public class Main {
                        switch (opcao){
                            case 1:
                                System.out.println("Digite o titulo do livro");
-                               locacao.getLivro().setTitulo(scanner.next());
+                               Locacao.getlivro().setTitulo(scanner.next());
                                System.out.println("Digite o autor do livro");
-                               locacao.getLivro().setAutor(scanner.next());
+                               locacao.getlivro().setAutor(scanner.next());
                                System.out.println("Digite o genero do livro");
-                               locacao.getLivro().setGenero(scanner.next());
+                               locacao.getlivro().setGenero(scanner.next());
                                break;
 
                            case 2:
                                System.out.println("Digite o titulo do livro");
-                               locacao.getLivro().setTitulo(scanner.next());
+                               locacao.getlivro().setTitulo(scanner.next());
                                System.out.println("Digite o autor do livro");
-                               locacao.getLivro().setAutor(scanner.next());
+                               locacao.getlivro().setAutor(scanner.next());
                                System.out.println("Digite o genero do livro");
-                               locacao.getLivro().setGenero(scanner.next());
+                               locacao.getlivro().setGenero(scanner.next());
                                break;
 
                            case 3:
-                               System.out.println(locacao.getLivro().toString());
+                               System.out.println(locacao.getlivro().toString());
                                break;
                            case 4:
-                               System.out.println(locacao.getLivro().toString());
+                               System.out.println(locacao.getlivro().toString());
                                break;
 
                            default:
